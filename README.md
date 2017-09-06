@@ -4,3 +4,5 @@ Node.js CUE file generator - from [Hindenburg](https://hindenburg.com) chapter t
 Run from the command line passing the input file as the first argument. An optional second parameter is the output file name, if omitted the input file name, sans extension, with .cue will be used.
 
 The filename will also be used for the filename noted inside the cue file, with an mp3 extension.
+
+```node cuegen.js example.txt``` will output example.cue, refering to the audio file as example.mp3
