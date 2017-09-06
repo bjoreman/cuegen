@@ -5,4 +5,4 @@ Run from the command line passing the input file as the first argument. An optio
 
 The filename will also be used for the filename noted inside the cue file, with an mp3 extension.
 
-```node cuegen.js example.txt``` will output example.cue, refering to the audio file as example.mp3
+```node cuegen.js example.txt``` will output example.cue, refering to the audio file as example.mp3.
