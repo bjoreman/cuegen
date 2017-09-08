@@ -21,11 +21,13 @@ const createTimeCode = function(hhmmss, millis) {
     if (hhmmss.length > 0) {
         hours = parseInt(hhmmss.pop(), 10);
     }
-    const frames = 75 * (millis * 0.001);
+    const frames = Math.floor(75 * (millis * 0.001));
     return `${ makeTwoDigit((hours * 60) + minutes) }:${ makeTwoDigit(seconds) }:${ makeTwoDigit(frames) }`;
 };
 
 const createCue = function(input, fileName) {
+    input = input.replace(/\r/g, "\n");
+    input = input.replace(/\n\n/g, "\n");
     const lines = input.split("\n");
     const result = [];
     result.push(`FILE "${ fileName }.mp3" MP3`);
